@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorry Eva Madam ❤️</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            /* নিচের লাইনে bg.jpg এর জায়গায় আপনার ছবির সঠিক নাম দিন */
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('./background.jpg');;
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: #fff;
+            overflow: hidden;
+        }
+
+        .container {
+            background: rgba(0, 0, 0, 0.4);
+            backdrop-filter: blur(5px); /* ব্যাকগ্রাউন্ড ঝাপসা করে লেখা স্পষ্ট করবে */
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            animation: fadeIn 2s ease;
+            max-width: 80%;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            color: #ff4d6d;
+        }
+
+        p {
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+
+        button {
+            background: #ff4d6d;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 30px;
+            color: white;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: 0.3s;
+            font-weight: bold;
+        }
+
+        button:hover {
+            background: #ff1e4d;
+            transform: scale(1.1);
+        }
+
+        #message {
+            margin-top: 20px;
+            font-weight: bold;
+            color: #ffb3c1;
+            font-size: 1.2rem;
+            min-height: 1.5em;
+        }
+
+        @keyframes fadeIn {
+            from {opacity: 0; transform: translateY(20px);} 
+            to {opacity: 1; transform: translateY(0);} 
+        }
+
+        .heart {
+            font-size: 3rem;
+            animation: heartbeat 1.2s infinite;
+            margin-bottom: 10px;
+        }
+
+        @keyframes heartbeat {
+            0%, 100% {transform: scale(1);} 
+            50% {transform: scale(1.2);} 
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="heart">❤️</div>
+        <h1>Sorry Eva Madam 😔</h1>
+        <p>I know I messed up... it will never happen anymore.<br>Please, please Madam, I'm sorry.</p>
+        <p>Please forgive me 💔</p>
+        <button onclick="showLove()">Click if you still love me 💖</button>
+        <p id="message"></p>
+    </div>
+
+    <script>
+        function showLove() {
+            const msg = document.getElementById('message');
+            msg.innerText = "I promise I’ll make it up to you, Eva Madam ❤️🥺";
+            msg.style.animation = "fadeIn 1s ease";
+        }
+    </script>
+
+</body>
+</html>
